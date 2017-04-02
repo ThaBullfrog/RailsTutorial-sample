@@ -36,6 +36,9 @@ gem 'capistrano-rails', '~> 1.2'
 gem 'capistrano-passenger', '~> 0.2'
 gem 'capistrano-rvm', '~>0.1'
 
+# Use bootstrap to help make the site mobile ready
+gem 'bootstrap', '~> 4.0.0.alpha6'
+
 group :development, :test do
   gem 'sqlite3', '~> 1.3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
