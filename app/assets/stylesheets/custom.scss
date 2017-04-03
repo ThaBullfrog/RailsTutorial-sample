@@ -5,9 +5,13 @@ body {
 }
 
 .main-content {
-  padding-top: 116px;
+  padding-top: 66px;
   padding-bottom: 10px;
   background: white;
+
+  @media (min-width: $grid-float-breakpoint) {
+    padding-top: 116px;
+  }
 }
 
 .btn-sign-up {
