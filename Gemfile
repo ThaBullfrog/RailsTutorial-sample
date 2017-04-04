@@ -39,6 +39,9 @@ gem 'capistrano-rvm', '~>0.1'
 # Use bootstrap to help make the site mobile ready
 gem 'bootstrap-sass', '~> 3.3'
 
+# Use bcrypt to hash passwords
+gem 'bcrypt', '~> 3.1'
+
 group :development, :test do
   gem 'sqlite3', '~> 1.3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
