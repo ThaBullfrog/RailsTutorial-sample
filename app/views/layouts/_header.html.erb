@@ -1,4 +1,3 @@
-
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -9,18 +8,15 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">
-      <table class="visible-xs-block">
-        <tr>
-          <th>
-              <a href="<%= root_path %>">
-                <%= image_tag("rails_logo_small.png", alt: "Rails Logo") %>
-              </a>
-          </th>
-        </tr>
-      </table>
-      <a href="<%= root_path %>">
-        <table class="hidden-xs">
+      <a class="navbar-brand" href="<%= root_path %>">
+        <table class="visible-xs-block navbar-brand-table">
+          <tr>
+            <th>
+              <%= image_tag("rails_logo_small.png", alt: "Rails Logo") %>
+            </th>
+          </tr>
+        </table>
+        <table class="hidden-xs navbar-brand-table">
           <tr>
             <th>
               <%= image_tag("rails_logo.png", alt: "Rails Logo") %>
@@ -30,7 +26,6 @@
             </th>
           </tr>
         </table>
-      </a>
       </a>
     </div>
 

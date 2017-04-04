@@ -43,28 +43,34 @@
     padding: 0 $navbar-padding-horizontal;
     height: $navbar-desktop-height;
   }
-  table {
+}
+
+.navbar-brand-table {
+  height: $navbar-height;
+  color: rgb(119, 119, 119);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 30px;
+  tbody {
     height: $navbar-height;
+  }
+  tr {
+    height: $navbar-height;
+  }
+  th {
+    height: $navbar-height;
+    font-weight: normal;
+  }
+  @media (min-width: $grid-float-breakpoint) {
+    height: $navbar-desktop-height;
     tbody {
-      height: $navbar-height;
+      height: $navbar-desktop-height;
     }
     tr {
-      height: $navbar-height;
+      height: $navbar-desktop-height;
     }
     th {
-      height: $navbar-height;
-    }
-    @media (min-width: $grid-float-breakpoint) {
       height: $navbar-desktop-height;
-      tbody {
-        height: $navbar-desktop-height;
-      }
-      tr {
-        height: $navbar-desktop-height;
-      }
-      th {
-        height: $navbar-desktop-height;
-      }
     }
   }
 }
