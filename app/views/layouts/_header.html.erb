@@ -13,20 +13,24 @@
       <table class="visible-xs-block">
         <tr>
           <th>
-            <%= image_tag("rails_logo_small.png", alt: "Rails Logo") %>
+              <a href="<%= root_path %>">
+                <%= image_tag("rails_logo_small.png", alt: "Rails Logo") %>
+              </a>
           </th>
         </tr>
       </table>
-      <table class="hidden-xs">
-        <tr>
-          <th>
-            <%= image_tag("rails_logo.png", alt: "Rails Logo") %>
-          </th>
-          <th>
-            &nbsp;Ruby on Rails Tutorial Sample App
-          </th>
-        </tr>
-      </table>
+      <a href="<%= root_path %>">
+        <table class="hidden-xs">
+          <tr>
+            <th>
+              <%= image_tag("rails_logo.png", alt: "Rails Logo") %>
+            </th>
+            <th>
+              &nbsp;Ruby on Rails Tutorial Sample App
+            </th>
+          </tr>
+        </table>
+      </a>
       </a>
     </div>
 
