@@ -1,5 +1,11 @@
 @import "custom_navbar";
 
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
 body {
   background: #DDD;
 }
@@ -22,4 +28,30 @@ body {
 
 .center {
   text-align: center;
+}
+
+.sign-up-form {
+  input, textarea {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 20px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    border: 2px solid red;
+    &:focus {
+      outline: none !important;
+      border: 2px solid red;
+    }
+  }
 }

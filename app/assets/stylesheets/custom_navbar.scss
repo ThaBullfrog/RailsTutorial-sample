@@ -52,24 +52,12 @@
   font-weight: normal;
   font-size: 28px;
   line-height: 100%;
-  tbody {
-    height: $navbar-height;
-  }
-  tr {
-    height: $navbar-height;
-  }
   th {
     height: $navbar-height;
     font-weight: normal;
   }
   @media (min-width: $grid-float-breakpoint) {
     height: $navbar-desktop-height;
-    tbody {
-      height: $navbar-desktop-height;
-    }
-    tr {
-      height: $navbar-desktop-height;
-    }
     th {
       height: $navbar-desktop-height;
     }
