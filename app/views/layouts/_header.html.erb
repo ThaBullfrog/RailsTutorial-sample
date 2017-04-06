@@ -9,14 +9,14 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="<%= root_path %>">
-        <table class="visible-xs-block navbar-brand-table">
+        <table class="visible-xs-block visible-sm-block navbar-brand-table">
           <tr>
             <th>
               <%= image_tag("rails_logo_small.png", alt: "Rails Logo") %>
             </th>
           </tr>
         </table>
-        <table class="hidden-xs navbar-brand-table">
+        <table class="hidden-xs hidden-sm navbar-brand-table">
           <tr>
             <th>
               <%= image_tag("rails_logo.png", alt: "Rails Logo") %>
@@ -34,10 +34,17 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "About", about_path %></li>
-        <li><%= link_to "Contact", contact_path %></li>
+        <li class="visible-xs-block"><%= link_to "About", about_path %></li>
+        <li class="visible-xs-block"><%= link_to "Contact", contact_path %></li>
         <li><%= link_to "Help", help_path %></li>
+        <% if current_user %>
+          <li><%= link_to "My Profile", current_user %></li>
+          <li><%= link_to "My Account", '#' %></li>
+          <li><%= link_to "Log Out", logout_path, method: "delete" %></li>
+        <% else %>
+          <li><%= link_to "Log In", login_path %></li>
+        <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+  </div><!-- /.container -->
 </nav>
