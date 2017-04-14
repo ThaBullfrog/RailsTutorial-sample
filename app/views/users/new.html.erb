@@ -2,21 +2,5 @@
 <h1 class="center">Sign Up</h1>
 
 <%= render 'shared/form_container' do %>
-  <%= form_for(@user, url: signup_path) do |f| %>
-    <%= render partial: 'shared/error_messages' %>
-
-    <%= f.label :name %>
-    <%= f.text_field :name, class: 'form-control' %>
-
-    <%= f.label :email %>
-    <%= f.email_field :email, class: 'form-control' %>
-
-    <%= f.label :password %>
-    <%= f.password_field :password, class: 'form-control' %>
-
-    <%= f.label :password_confirmation, "Password Confirmation" %>
-    <%= f.password_field :password_confirmation, class: 'form-control' %>
-
-    <%= f.submit "Create my account.", class: "btn btn-primary" %>
-  <% end %><br>
+  <%= render 'users/user_form', confirmation: true, button_text: "Create my account." %>
 <% end %>

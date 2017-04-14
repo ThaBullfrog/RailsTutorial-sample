@@ -1,0 +1,13 @@
+<% provide(:title, "Edit Account") %>
+<h1 class="center">Edit Account</h1>
+
+<%= render 'shared/form_container' do %>
+  <%= render 'users/user_form', confirmation: false, button_text: "Save changes." %>
+  <p>
+    <%= link_to "Change Password", change_password_user_path(@user) %>
+  </p>
+  <div class="gravatar_edit">
+    <%= gravatar_for @user %>
+    <a href="http://gravatar.com/emails" target="_blank" rel="noopener">Change Avatar</a>
+  </div>
+<% end %>
