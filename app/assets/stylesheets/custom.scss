@@ -100,3 +100,18 @@ body {
     padding: 5px 0;
   }
 }
+
+.danger-link {
+  color: red;
+  &:hover {
+    color: red;
+  }
+}
+
+.admin-link {
+  font-size: 150%;
+  color: #CC0;
+  &:hover {
+    color: #CC0;
+  }
+}
