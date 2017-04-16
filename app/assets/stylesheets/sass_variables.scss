@@ -1,0 +1,21 @@
+
+//-- Bootstrap ---------------------------------
+
+$screen-md: 992px;
+$screen-md-min: $screen-md;
+$grid-float-breakpoint: $screen-md-min;
+$navbar-height: 50px;
+$navbar-desktop-height: 100px;
+
+$font-size-base: 14px;
+$line-height-base: 1.428571429;
+$line-height-computed: floor(($font-size-base * $line-height-base));
+$navbar-desktop-padding-vertical: (($navbar-desktop-height - $line-height-computed) / 2);
+
+//----------------------------------------------
+
+// -- Mine -------------------------------------
+
+$admin-control-color: #EFD000;
+
+// ---------------------------------------------

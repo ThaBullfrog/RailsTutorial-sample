@@ -1,9 +1,13 @@
 <% provide(:title, "Users") %>
-<h1>Users</h1><br>
-<% if params[:manage] %>
-  <p><%= link_to "Regular View", users_path, class: "admin-link" %></p>
-<% else %>
-  <p><%= link_to "Manage Users", users_path(manage: true), class: "admin-link" %></p>
+<h1>Users</h1>
+<% if current_user.admin? %>
+  <br>
+  <% current_page = params[:page] || 1 %>
+  <% if params[:manage] %>
+    <p><%= link_to "Regular View", users_path(page: current_page), class: "admin-link" %></p>
+  <% else %>
+    <p><%= link_to "Manage Users", users_path(page: current_page, manage: true), class: "admin-link" %></p>
+  <% end %>
 <% end %>
 
 <%= will_paginate %>

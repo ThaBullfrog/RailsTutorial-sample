@@ -17,6 +17,10 @@ class ActiveSupport::TestCase
     session[:user_id] = user.id
   end
 
+  def times_10_seconds_or_less_apart(time1, time2)
+    return time1 < time2 + 10.seconds && time1 > time2 - 10.seconds
+  end
+
 end
 
 class ActionDispatch::IntegrationTest

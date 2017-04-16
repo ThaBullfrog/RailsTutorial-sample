@@ -103,15 +103,15 @@ body {
 
 .danger-link {
   color: red;
-  &:hover {
+  &:hover, &:focus {
     color: red;
   }
 }
 
 .admin-link {
   font-size: 150%;
-  color: #CC0;
-  &:hover {
-    color: #CC0;
+  color: $admin-control-color;
+  &:hover, &:focus {
+    color: $admin-control-color;
   }
 }

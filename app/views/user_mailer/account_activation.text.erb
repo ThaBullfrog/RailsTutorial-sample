@@ -2,6 +2,6 @@
 
 You just registered for an Sample App account, however it has not been activated yet. Click the link below to activate your account. If you do not activate your account within seven days, it will be deleted.
 
-<%= edit_account_activation_url(@user.activation_token, id: @user.id) %>
+<%= edit_account_activation_url(id: @user.activation_token, user_id: @user.id) %>
 
 If you did not register for a Sample App account, ignore this email.
