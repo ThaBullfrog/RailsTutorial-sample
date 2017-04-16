@@ -7,23 +7,6 @@
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 server "172.245.173.138", user: "deploy", roles: %w{app db web}
 
-Rails.application.configure do
-  config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.delivery_method = :smtp
-  host = 'gmail.com'
-  config.action_mailer.default_url_options = { host: host }
-  ActionMailer::Base.smtp_settings = {
-    :address        => 'smtp.gmail.com',
-    :port           => '587',
-    :domain         => 'gmail.com',
-    :user_name      => 'sampleappbot@gmail.com',
-    :password       => ENV['GMAIL_PASSWORD'],
-    :authentication => :plain,
-    :enable_starttls_auto => true
-  }
-end
-
-
 # role-based syntax
 # ==================
 
