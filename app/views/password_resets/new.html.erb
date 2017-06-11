@@ -1,0 +1,11 @@
+<% provide(:title, "Forgot Password") %>
+<h1 class="center">Forgot Password</h1>
+
+<%= render 'shared/form_container' do %>
+  <%= form_for(:password_reset, url: password_resets_path) do |f| %>
+    <%= f.label :email %>
+    <%= f.email_field :email, class: 'form-control' %>
+
+    <%= f.submit "Submit", class: 'btn btn-primary' %>
+  <% end %>
+<% end %>
