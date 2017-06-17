@@ -15,7 +15,15 @@
   <span class="visible-xs-inline"><br></span>
   <section class="col-sm-8">
     <p>
-      <!-- Timeline -->
+      <% if @user.posts.any? %>
+        <%= will_paginate @posts %>
+        <ul class="posts">
+          <%= render @posts %>
+        </ul>
+        <%= will_paginate @posts %>
+      <% else %>
+        This user has not posted yet.
+      <% end %>
     </p>
   </section>
 </div>

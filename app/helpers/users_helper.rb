@@ -10,4 +10,8 @@ module UsersHelper
     return image_tag(gravatar_url, alt: "#{user.name}'s Avatar", class: "gravatar", style: "width: #{size}px; height: #{size}px")
   end
 
+  def gravatar_with_link_for(user, size: 80)
+    link_to gravatar_for(user, size: size), user
+  end
+
 end
