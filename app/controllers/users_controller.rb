@@ -88,14 +88,6 @@ class UsersController < ApplicationController
       update_params
     end
 
-    def logged_in_user
-      unless logged_in?
-        flash[:warning] = "Please log in."
-        store_location
-        redirect_to login_url
-      end
-    end
-
     def correct_user
       @user = User.find(params[:id])
       unless current_user?(@user)

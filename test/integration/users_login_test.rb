@@ -30,9 +30,9 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
   test "valid login followed by logout" do
     get login_path
     post login_path, params: { session: { email: @user.email, password: 'password' } }
-    assert_redirected_to @user, 'user should be redirected to their profile after login'
+    assert_redirected_to root_url, 'user should be redirected to root after login'
     follow_redirect!
-    assert_template 'users/show'
+    assert_template 'static_pages/home'
     assert_select "a[href=?]", user_path(@user), true, "navbar should've changed"
     delete logout_path
     assert_not is_logged_in?, 'user should be able to log out'

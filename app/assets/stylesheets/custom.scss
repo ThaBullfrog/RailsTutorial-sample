@@ -32,10 +32,23 @@ body {
   text-align: center;
 }
 
+.block-centered-btn {
+  width: 100px;
+  display: block;
+  margin: auto;
+}
+
+.blank-20-pixels {
+  height: 20px;
+}
+
 .sign-up-form {
   input, textarea {
     width: 100%;
     margin-bottom: 20px;
+  }
+  textarea {
+    height: 80px;
   }
 }
 
@@ -124,10 +137,11 @@ body {
 }
 
 .post {
-  padding: 10px;
-  margin: 10px;
-  background: #E0E0E0;
-  border: 1px solid #CCC;
+  max-width: 380px;
+  padding: 10px 0;
+  margin: 10px 0;
+  //background: #E0E0E0;
+  //border: 1px solid #CCC;
 }
 
 .post-content {
@@ -137,5 +151,6 @@ body {
 }
 
 .timestamp {
+  font-size: 0.85em;
   display: block;
 }

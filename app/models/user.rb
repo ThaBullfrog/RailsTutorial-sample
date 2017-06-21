@@ -64,6 +64,10 @@ class User < ApplicationRecord
     posts.create!(content: content)
   end
 
+  def feed
+    Post.where("user_id = ?", id)
+  end
+
   private
 
     def downcase_email

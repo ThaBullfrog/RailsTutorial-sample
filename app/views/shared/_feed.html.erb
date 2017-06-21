@@ -1,0 +1,7 @@
+<div style="max-width: 380px; margin: auto">
+  <%= will_paginate(@feed_items) %>
+  <ul class="posts">
+    <%= render @feed_items %>
+  </ul>
+  <%= will_paginate(@feed_items) %>
+</div>
