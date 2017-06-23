@@ -1,7 +1,10 @@
 <li id="post-<%= post.id %>" class="post">
   <%= gravatar_with_link_for(post.user, size: 40) %>
   <span class="user"><%= link_to post.user.name, post.user %></span>
-  <span class="post-content"><%= post.content %></span>
+  <span class="post-content">
+    <div><%= image_tag post.picture.url, class: "picture" if post.picture? %></div>
+    <%= post.content %>
+  </span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(post.created_at) %> ago
     <% if current_user?(post.user) || (logged_in? && current_user.admin?) %>
