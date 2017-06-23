@@ -45,6 +45,11 @@ gem 'bcrypt', '~> 3.1'
 gem 'will_paginate', '~> 3.1'
 gem 'bootstrap-will_paginate', '~> 0.0'
 
+# Image Upload
+gem 'carrierwave', '~> 1.1'
+gem 'mini_magick', '~> 4.7'
+gem 'fog', '~> 1.40'
+
 group :development, :test do
   gem 'sqlite3', '~> 1.3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
