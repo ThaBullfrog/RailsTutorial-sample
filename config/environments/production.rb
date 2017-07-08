@@ -98,4 +98,6 @@ Rails.application.configure do
     :enable_starttls_auto => true
   }
 
+  config.relative_url_root = "/sample_app"
+
 end
