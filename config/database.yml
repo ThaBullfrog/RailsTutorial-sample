@@ -23,7 +23,7 @@ test:
 production:
   adapter: postgresql
   host: 127.0.0.1
-  database: sample_app_production
+  database: sample_app
   username: deploy
   password: <%= ENV['SAMPLE_APP_DATABASE_PASSWORD'] %>
   encoding: unicode
