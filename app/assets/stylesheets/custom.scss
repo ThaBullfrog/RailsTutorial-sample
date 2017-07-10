@@ -15,6 +15,10 @@ body {
   margin: 10px 0;
 }
 
+.red_text {
+  color: red;
+}
+
 .post-character-count {
   text-align: right;
   margin-top: -20px;
@@ -114,13 +118,33 @@ body {
   }
 }
 
+.max-width-380-centered {
+  max-width: 380px;
+  margin: auto;
+}
+
+th {
+  font-weight: normal;
+}
+
+.margin-auto {
+  margin: auto;
+}
+
+.padded-table {
+  th {
+    padding: 5px;
+  }
+}
+
 .users {
   img {
     margin-right: 10px;
   }
   th {
-    font-weight: normal;
-    font-size: 150%;
+    .name {
+      font-size: 150%;
+    }
     padding: 5px 0;
   }
 }
@@ -164,4 +188,26 @@ body {
 .timestamp {
   font-size: 0.85em;
   display: block;
+}
+
+.full-width {
+  display: block;
+  width: 100%;
+}
+
+.write-post-form {
+  input, textarea {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  textarea {
+    height: 80px;
+  }
+}
+
+input,
+button,
+select,
+textarea {
+  font-size: 16px;
 }

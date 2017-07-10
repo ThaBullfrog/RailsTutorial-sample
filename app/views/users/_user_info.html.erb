@@ -1,0 +1,18 @@
+<section class="user_info">
+  <table class="padded-table margin-auto"><tbody>
+    <tr>
+      <th>
+        <%= avatar_for user %>
+      </th>
+      <th style="padding-left: 10px">
+        <h3 style="margin: 0"><%= user.name.split(' ').join("<br>").html_safe %></h3>
+      </th>
+    </tr>
+    <tr>
+      <th colspan="2">
+        <%= following_link_for(user) %> | 
+        <%= followers_link_for(user) %>
+      </th>
+    </tr>
+  </tbody></table>
+</section>

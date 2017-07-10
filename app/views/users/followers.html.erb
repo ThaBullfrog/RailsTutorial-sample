@@ -1,0 +1,13 @@
+<% provide(:title, "#{@user.name} - Followers") %>
+
+<div class="max-width-380-centered">
+  <h1><%= link_to @user.name, @user %>'s followers</h1>
+
+  <%= will_paginate(@followers) %>
+
+  <table class="users">
+    <%= render @followers %>
+  </table>
+
+  <%= will_paginate(@followers) %>
+</div>

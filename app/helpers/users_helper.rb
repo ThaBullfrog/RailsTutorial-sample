@@ -14,4 +14,14 @@ module UsersHelper
     link_to gravatar_for(user, size: size), user
   end
 
+  def following_link_for(user)
+    count = user.following.count
+    link_to("#{count} following", following_user_path(user))
+  end
+
+  def followers_link_for(user)
+    count = user.followers.count
+    link_to(pluralize(count, "follower"), followers_user_path(user))
+  end
+
 end

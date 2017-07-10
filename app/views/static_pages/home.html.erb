@@ -1,6 +1,12 @@
 <% if logged_in? %>
-  <%= render 'shared/write_post_collapse', write_post_expanded: local_assigns.fetch(:write_post_expanded, false) %>
-  <%= render 'shared/feed' %>
+  <div class="row">
+    <div class="col-md-4">
+      <%= render 'users/user_info', user: current_user %>
+      <div class="blank-20-pixels"></div>
+      <%= write_post_collapse(local_assigns) %>
+    </div>
+    <%= render 'shared/feed' %>
+  </div>
 <% else %>
   <%= render 'welcome' %>
 <% end %>

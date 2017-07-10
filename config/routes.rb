@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   post '/signup', to: 'users#create'
   resources :users do
     member do
+      get :following, :followers
       get 'change_password', to: 'users#edit_password'
       patch 'change_password', to: 'users#update_password'
     end

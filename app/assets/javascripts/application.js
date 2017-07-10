@@ -28,11 +28,9 @@ var updateCharacterCount = function(){
 
   if (char_count <= max_count) {
     $('#post-character-count').removeClass('red_text')
-      .addClass('green_text')
       .text(remaining_char);
   } else {
-    $('#post-character-count').removeClass('green_text')
-      .addClass('red_text')
+    $('#post-character-count').addClass('red_text')
       .text(remaining_char);
   }
 }

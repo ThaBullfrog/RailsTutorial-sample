@@ -3,9 +3,11 @@
     <%= gravatar_for user, size: 50 %>
   </th>
   <th>
-    <%= link_to user.name, user %>
+    <%= link_to user.name, user, class: "name" %>
     <% if params[:manage] && current_user.admin? && user != current_user %>
       | <%= link_to "delete", user, method: :delete, data: { confirm: user.name + " will be permanently deleted." }, class: "danger-link" %>
-    <% end %>
+    <% end %><br>
+    <%= following_link_for(user) %> | 
+    <%= followers_link_for(user) %>
   </th>
 </tr>

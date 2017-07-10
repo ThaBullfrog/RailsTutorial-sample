@@ -15,4 +15,8 @@ module ApplicationHelper
     end
     return returns.join.html_safe
   end
+
+  def write_post_collapse(local_assigns)
+    render 'shared/write_post_collapse', write_post_expanded: local_assigns.fetch(:write_post_expanded, false)
+  end
 end

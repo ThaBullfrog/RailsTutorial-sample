@@ -1,13 +1,11 @@
-<p>
-  <a class="btn btn-primary block-centered-btn" data-toggle="collapse" href="#write-a-post" aria-expanded="true" aria-controls="write-a-post">
+<div class="write-post-form">
+  <a class="btn btn-primary full-width" data-toggle="collapse" href="#write-a-post" aria-expanded="true" aria-controls="write-a-post">
     Write a post
   </a>
-</p>
-<div class="collapse<%= " in" if write_post_expanded %>" id="write-a-post">
-  <%= render 'shared/form_container' do %>
+  <div class="collapse<%= " in" if write_post_expanded %>" id="write-a-post">
     <div class="blank-20-pixels"></div>
     <section class="micropost_form">
       <%= render 'shared/post_form' %>
     </section>
-  <% end %>
+  </div>
 </div>
