@@ -1,7 +1,7 @@
 <% provide(:title, "#{@user.name} - Following") %>
 
 <div class="max-width-380-centered">
-  <h1>Users <%= link_to @user.name, @user %> follows</h1>
+  <h1><%= pluralize_without_number(@count, "User") %> <%= link_to @user.name, @user %> follows (<%= @count.to_s %>)</h1>
 
   <%= will_paginate(@following) %>
 

@@ -5,6 +5,7 @@
   </aside>
   <span class="visible-xs-inline"><br></span>
   <section class="max-width-380-centered">
+    <%= render 'follow_form' if logged_in? %>
     <p>
       <% if @user.posts.any? %>
         <%= will_paginate @posts %>

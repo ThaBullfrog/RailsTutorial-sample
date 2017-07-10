@@ -19,4 +19,10 @@ module ApplicationHelper
   def write_post_collapse(local_assigns)
     render 'shared/write_post_collapse', write_post_expanded: local_assigns.fetch(:write_post_expanded, false)
   end
+
+  def pluralize_without_number(count, string)
+    array = pluralize(count, string).split(" ")
+    array.delete_at(0)
+    return array.join(" ")
+  end
 end

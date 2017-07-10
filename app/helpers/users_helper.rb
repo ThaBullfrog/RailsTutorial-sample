@@ -16,12 +16,20 @@ module UsersHelper
 
   def following_link_for(user)
     count = user.following.count
-    link_to("#{count} following", following_user_path(user))
+    link_to("#{count} following", following_user_path(user), id: "following")
   end
 
   def followers_link_for(user)
     count = user.followers.count
-    link_to(pluralize(count, "follower"), followers_user_path(user))
+    link_to(pluralize(count, "follower"), followers_user_path(user), id: "followers")
+  end
+
+  def following_text_for(user)
+    pluralize(user.following.count, "follower")
+  end
+
+  def followers_text_for(user)
+    pluralize(user.followers.count, "follower")
   end
 
 end

@@ -9,6 +9,7 @@ tau_manifesto:
 
 cat_video:
   content: "Sad cats are sad: http://youtu.be/PKffm2uI4dk"
+  user: user_5
   created_at: <%= 2.hours.ago %>
 
 most_recent:
