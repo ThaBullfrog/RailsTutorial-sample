@@ -1,6 +1,6 @@
 # Live Site Link
 
-[https://bullfrogwebsites.com/sample-app](https://bullfrogwebsites.com/sample-app)
+[https://bullfrogwebsites.com/sample-app](https://bullfrogwebsites.com/sample_app)
 
 # Ruby on Rails Tutorial sample application
 
