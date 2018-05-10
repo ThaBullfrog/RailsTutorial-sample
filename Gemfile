@@ -34,7 +34,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'capistrano', '~> 3.8'
 gem 'capistrano-rails', '~> 1.2'
 gem 'capistrano-passenger', '~> 0.2'
-gem 'capistrano-rvm', '~>0.1'
+gem 'capistrano-rbenv', '~> 2.1'
 
 # Use bootstrap to help make the site mobile ready
 gem 'bootstrap-sass', '~> 3.3'
